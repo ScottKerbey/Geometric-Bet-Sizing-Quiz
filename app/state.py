@@ -32,7 +32,7 @@ class PokerState(rx.State):
     @rx.event
     def on_load(self):
         """Initial question generation on page load."""
-        yield PokerState.generate_new_question
+        return PokerState.generate_new_question
 
     @rx.event
     def generate_new_question(self):
